@@ -1,8 +1,9 @@
-server:
-  port: 9000
 spring:
-  application:
-    name: feign
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/user?useUnicode=true&charsetEncoding=utf-8
+    username: root
+    password: root
 eureka:
   client:
     serviceUrl:
@@ -10,3 +11,6 @@ eureka:
 feign:
   hystrix:
     enabled: true
+management:
+  security:
+    enabled: false
